@@ -1,6 +1,7 @@
 
 import "./App.css";
 import {CardList} from "./components/CardList";
+// import MediaCard from "./components/Metarial"
 
 function App() {
   

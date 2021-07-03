@@ -6,7 +6,7 @@ export const Card = ({title, poster}) => {
         <div className="card-wrapper"> 
           <img src={poster}/>
           <p>{title}</p>
-      
+          
          
         </div>
     )
