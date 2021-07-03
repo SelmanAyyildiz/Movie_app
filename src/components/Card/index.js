@@ -1,11 +1,13 @@
 
 import "./style.css"
 
-export const Card = ({title, pop, poster}) => { 
+export const Card = ({title, poster}) => { 
     return (
-        <div className="card-wrapper" style={{backgroundImage:{poster}}}> 
+        <div className="card-wrapper"> 
+          <img src={poster}/>
           <p>{title}</p>
-          <p>{pop}</p>
+      
+         
         </div>
     )
 }

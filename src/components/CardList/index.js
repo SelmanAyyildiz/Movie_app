@@ -4,8 +4,8 @@ import {Card} from "../Card"
 import axios from "axios"
 
 const apiKey = "29b44dc404fcd29682c29a4d22da5c75";
-const baseUrl ="https://api.themoviedb.org/3/search/movie"
-
+const baseUrl ="https://api.themoviedb.org/3/search/movie";
+const baseImageUrl = "https://image.tmdb.org/t/p/w300";
 
 export const CardList = () => {
 
@@ -26,10 +26,13 @@ export const CardList = () => {
         console.log(movieData)
     return (
         <>
-            {movieData && movieData.map(movie => {
+            {movieData?.map((movie, index) => {
 
-             return <Card title={movie.title}
-                         
+             return <Card
+                      key={index}   
+                      title={movie.title}
+                   
+                      poster={baseImageUrl + movie.poster_path}
              />
             })}
         
